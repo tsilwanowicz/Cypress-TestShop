@@ -1,6 +1,7 @@
 import HomePage from "../page_objects/homePage";
 import CartPage from "../page_objects/cartPage";
 import OrderPage from "../page_objects/orderPage";
+import { faker } from '@faker-js/faker';
 
 describe ('my 2nd scenario', () => {
     const homePage = new HomePage();
