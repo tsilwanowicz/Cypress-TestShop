@@ -1,7 +1,8 @@
 {
-  "devDependencies": {
-    "@faker-js/faker": "^8.2.0",
-    "cypress": "^13.3.3"
-  },
-  "dependencies": {}
-}
+    "devDependencies": {
+      "@faker-js/faker": "^8.2.0",
+      "cypress": "^13.3.3"
+    },
+    "dependencies": {}
+  }
+  
