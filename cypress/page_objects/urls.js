@@ -9,6 +9,11 @@ class Urls {
         cy.visit(url)
     }
 
+    visitShopPage(){
+        const url = '/?post_type=product'
+        cy.visit(url)
+    }
+
 }
 
 export default Urls;
