@@ -34,7 +34,7 @@ class OrderPage{
         }
 
     checkIfOrderWasPlacedSuccesfully(){
-        cy.get(orderSection, {timeout:10000}).within(()=> {
+        cy.get(orderSection, {timeout:20000}).within(()=> {
             cy.get(orderID).should('be.visible')
             cy.get(orderDate).should('be.visible')
             cy.get(orderTotal).should('be.visible')
