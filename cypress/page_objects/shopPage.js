@@ -17,6 +17,8 @@ const reviewAuthor = '#author'
 const reviewMail = '#email'
 const submitReview = '#submit'
 const reviewList = '#comments'
+const addToCartButton = 'button[name="add-to-cart"]'
+const goToCart = '.button.wc-forward'
 
 class ShopPage{
 
@@ -36,7 +38,7 @@ class ShopPage{
     }
 
     checkProductPageUrl(productName){
-        cy.url().should('contain',productName.toLowerCase())
+        cy.url().should('contain', productName.toLowerCase())
     }
 
     checkProductDetailsPage(){
@@ -58,6 +60,11 @@ class ShopPage{
         cy.get(submitReview).click().then((review) => {
             cy.get(reviewList).should('not.be.empty')
         })
+    }
+
+    addProductToCartFromPDP(){
+        cy.get(addToCartButton).click()
+        cy.get(goToCart).should('be.visible').click()
     }
 
 }

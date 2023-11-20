@@ -14,7 +14,7 @@ describe('homepage, login, registration & search tab tests', () => {
     }
 
 
-    before(function (){
+    beforeEach(function (){
         cy.fixture('users').as('userData') 
     })
 

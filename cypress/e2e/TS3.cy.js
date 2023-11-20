@@ -10,7 +10,7 @@ describe('my first scenario', () => {
     const cartPage = new CartPage();
     const shopPage = new ShopPage();
 
-    before(function (){
+    beforeEach(function (){
         cy.fixture('products').as('productData')
     })
 
@@ -21,7 +21,6 @@ describe('my first scenario', () => {
         cartPage.checkIfAddedProductIsInCart(this.productData.Polo)
         cartPage.removeProductFromCart(this.productData.Polo)
         cartPage.checkIfCartIsEmpty()
-
     })
     
     it('should change sorting of products', function(){
