@@ -3,7 +3,8 @@ import CartPage from "../page_objects/cartPage";
 import OrderPage from "../page_objects/orderPage";
 import { faker } from '@faker-js/faker';
 
-describe ('my 2nd scenario', () => {
+describe ('go through the purchase process', () => {
+
     const homePage = new HomePage();
     const cartPage = new CartPage();
     const orderPage = new OrderPage();
