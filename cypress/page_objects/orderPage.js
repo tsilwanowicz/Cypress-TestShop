@@ -18,9 +18,9 @@ const orderPaymentMethod = '.method'
 
 class OrderPage{
 
-    fillAllRequiredData(){
-        cy.get(firstName).type(faker.name.firstName())
-        cy.get(lastName).type(faker.name.lastName())
+    fillAllRequiredData(data){
+        cy.get(firstName).type(faker.person.firstName())
+        cy.get(lastName).type(faker.person.lastName())
         cy.get(countryDropdown).select(countryDropdownPL, {force: true})
         cy.get(addressField).type(faker.address.streetAddress())
         cy.get(postalCodeField).type(faker.address.zipCode('##-###'))
