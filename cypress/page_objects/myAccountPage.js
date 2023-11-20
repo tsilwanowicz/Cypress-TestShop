@@ -5,6 +5,12 @@ const passwordField = '#password'
 const loginButton = 'button[name="login"]'
 const myAccountNavigation = '.woocommerce-MyAccount-navigation'
 const incorrectLoginError = 'ul[role="alert"]'
+const registrationEmailField = '#reg_email'
+const registerButton = 'button[name="register"]'
+const forgotPassword = '.lost_password > a'
+const userLogin = '#user_login'
+const resetPasswordButton = '.woocommerce-Button.button'
+
 
 class MyAccountPage{
 
@@ -31,6 +37,30 @@ class MyAccountPage{
     visitPage(){
         const urls = new Urls
         urls.visitMyAccountPage()
+    }
+
+    fillRegistrationEmail(email){
+        cy.get(registrationEmailField).type(email)
+    }
+
+    clickRegisterButton(){
+        cy.get(registerButton).click()
+    }
+
+    clickForgotPassword(){
+        cy.get(forgotPassword).click()
+    }
+
+    fillUserLoginField(email){
+        cy.get(userLogin, {timeout: 10000}).type(email)
+    }
+
+    clickResetPasswordButton(){
+        cy.get(resetPasswordButton).click()
+    }
+
+    checkResetPasswordUrl(){
+        cy.url().should('eq', 'https://tapsshop.pl/?page_id=9&lost-password&reset-link-sent=true')
     }
 
 }
