@@ -1,14 +1,10 @@
 version: 2.1
 orbs:
-  cypress: cypress-io/cypress@2.2.0
+  cypress: cypress-io/cypress@3.1.2
 workflows:
-  build: 
+  build:
     jobs:
-      - cypress/install
       - cypress/run:
-          requires:
-            - cypress/install
-          store_artifacts: true
-          parallel: true
+          start-command: 'npm run'
+          cypress-command: 'npx cypress run --parallel --record --group all tests'
           parallelism: 3
-          group: 2 machines
