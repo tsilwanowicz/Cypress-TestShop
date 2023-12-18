@@ -3,7 +3,6 @@ import MyAccountPage from "../page_objects/myAccountPage";
 import CartPage from "../page_objects/cartPage";
 import { faker } from '@faker-js/faker';
 
-
 describe('homepage, login, registration & search tab tests', () => {
     const homePage = new HomePage();
     const myAccountPage = new MyAccountPage();
@@ -29,17 +28,17 @@ describe('homepage, login, registration & search tab tests', () => {
         homePage.checkCategoryHeader('Bestsellery')
     })
 
-    it('search bar - multiple results', function(){
+    it('should test search bar with multiple results', function(){
         homePage.visitPage()
         homePage.checkSearchBarWithMultipleResults('Hoodie')
     })
 
-    it('search bar - only one result', function(){
+    it('should test search bar with only one result', function(){
         homePage.visitPage()
         homePage.checkSearchBarWithSingleResult('Beanie')
     })
 
-    it('successful login to the application', function(){
+    it('should login to the application', function(){
         homePage.visitPage()
         homePage.clickMyAccountHeaderButton()
         myAccountPage.fillUsernameFieldWithEmail(userData.email)
@@ -48,7 +47,7 @@ describe('homepage, login, registration & search tab tests', () => {
         myAccountPage.checkVisibilityOfMyAccountNavigation()
     })
 
-    it('invalid login to the application', function(){
+    it('should not login to the application', function(){
         myAccountPage.visitPage()
         myAccountPage.fillUsernameFieldWithEmail(faker.internet.email())
         myAccountPage.fillPasswordField(faker.internet.password())
@@ -57,7 +56,7 @@ describe('homepage, login, registration & search tab tests', () => {
 
     })
 
-    it('successful registration', function(){
+    it('should register a new account', function(){
         homePage.visitPage()
         homePage.clickMyAccountHeaderButton()
         myAccountPage.fillRegistrationEmail(faker.internet.email())

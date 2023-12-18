@@ -4,7 +4,7 @@ import CartPage from "../page_objects/cartPage";
 import ShopPage from "../page_objects/shopPage";
 import { faker } from '@faker-js/faker';
 
-describe('my first scenario', () => {
+describe('PDP related tests', () => {
     const homePage = new HomePage();
     const myAccountPage = new MyAccountPage();
     const cartPage = new CartPage();

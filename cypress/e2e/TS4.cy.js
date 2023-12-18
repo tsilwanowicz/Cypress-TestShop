@@ -2,8 +2,6 @@ import MyAccountPage from "../page_objects/myAccountPage";
 import HomePage from "../page_objects/homePage";
 import Urls from "../page_objects/urls";
 
-
-
 describe('verify my account tabs', () => {
     const myAccountPage = new MyAccountPage();
     const homePage = new HomePage();
