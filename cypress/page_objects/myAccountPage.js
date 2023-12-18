@@ -74,7 +74,7 @@ class MyAccountPage{
     }
 
     checkResetPasswordUrl(){
-        cy.url().should('eq', 'https://tapsshop.pl/?page_id=9&lost-password&reset-link-sent=true')
+        cy.url().should('eq', 'https://tapsshop.pl/moje-konto/lost-password/?reset-link-sent=true')
     }
 
     checkOrdersTab(){
