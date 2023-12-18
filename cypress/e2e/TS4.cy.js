@@ -17,7 +17,7 @@ describe('verify my account tabs', () => {
         cy.fixture('users').as('userData') 
     })
 
-    it.only('should login and check content of my account tabs', function(){
+    it('should login and check content of my account tabs', function(){
         homePage.visitPage()
         homePage.clickMyAccountHeaderButton()
         myAccountPage.fillUsernameFieldWithEmail(userData.email)
